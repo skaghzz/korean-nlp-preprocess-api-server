@@ -14,17 +14,22 @@ def response(result) -> dict:
     }
 
 
+def get_input_texts():
+    data = request.get_json()
+    return data['texts']
+
+
 @app.route("/split-sentence", methods=['POST'])
 def split_sentence() -> dict:
-    data = request.get_json()
-    sentence_list = splitter.split_sentence(data['paragraphs'])
+    texts = get_input_texts()
+    sentence_list = splitter.split_sentence(texts)
     return response(sentence_list)
 
 
 @app.route("/clean-text", methods=['POST'])
 def clean_text() -> dict:
-    data = request.get_json()
-    text_list = cleaner.clean_text(data['text'])
+    texts = get_input_texts()
+    text_list = cleaner.clean_text(texts)
     return response(text_list)
 
 
