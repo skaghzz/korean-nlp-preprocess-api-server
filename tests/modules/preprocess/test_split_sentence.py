@@ -1,10 +1,10 @@
 from unittest import TestCase
-from app.modules.preprocess.sentence_split import SentenceSplit
+from app.modules.preprocess.split_sentence import split_sentence
 
 
 class TestSentenceSplit(TestCase):
     def setUp(self) -> None:
-        target_sentences = """제임스 얼 "지미" 카터 주니어는 민주당 출신 미국 39번째 대통령 이다.
+        self.target_sentences = """제임스 얼 "지미" 카터 주니어는 민주당 출신 미국 39번째 대통령 이다.
 
 지미 카터는 조지아주 섬터 카운티 플레인스 마을에서 태어났다.
 
@@ -23,9 +23,8 @@ class TestSentenceSplit(TestCase):
 조지아 주지사로 지내면서, 미국에 사는 흑인 등용법을 내세웠다.
 
 1976년 대통령 선거에 민주당 후보로 출마하여 도덕주의 정책으로 내세워, 포드를 누르고 당선되었다."""
-        self.sentenceSplit = SentenceSplit(target_sentences)
 
     def test_splitting(self):
-        sentences_list = self.sentenceSplit.get_sentences()
+        sentences_list = split_sentence([self.target_sentences])
         self.assertIsInstance(sentences_list, list)
         self.assertTrue(len(sentences_list) > 0)
