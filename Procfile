@@ -1,0 +1,1 @@
+web: gunicorn korean-nlp-preprocess-api-server.wsgi
