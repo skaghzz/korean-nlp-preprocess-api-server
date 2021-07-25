@@ -1,5 +1,5 @@
 from unittest import TestCase
-from app.modules.preprocess.clean_text import clean_text
+from preprocess.clean_text import clean_text
 
 
 class Test(TestCase):

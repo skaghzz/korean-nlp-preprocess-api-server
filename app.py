@@ -1,10 +1,8 @@
-import json
-
 from flask import Flask, request
 from flask_cors import CORS
 
-from modules.preprocess import split_sentence as splitter
-from modules.preprocess import clean_text as cleaner
+from preprocess import split_sentence as splitter
+from preprocess import clean_text as cleaner
 
 app = Flask(__name__)
 CORS(app, resources={
@@ -13,10 +11,10 @@ CORS(app, resources={
 })
 
 
-def response(result) -> dict:
+def response(success=True, error=None, result=None) -> dict:
     return {
-        'success': True,
-        'error': None,
+        'success': success,
+        'error': error,
         'result': result
     }
 
@@ -26,18 +24,23 @@ def get_input_texts():
     return json_data['texts']
 
 
+@app.route('/')
+def index():
+    return response(success=True, result="korean nlp preprocess server is on.")
+
+
 @app.route("/api/split-sentence", methods=['POST'])
 def split_sentence() -> dict:
     texts = get_input_texts()
     sentence_list = splitter.split_sentence(texts)
-    return response(sentence_list)
+    return response(success=True, result=sentence_list)
 
 
 @app.route("/api/clean-text", methods=['POST'])
 def clean_text() -> dict:
     texts = get_input_texts()
     text_list = cleaner.clean_text(texts)
-    return response(text_list)
+    return response(success=True, result=text_list)
 
 
 if __name__ == '__main__':

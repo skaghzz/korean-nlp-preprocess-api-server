@@ -1,5 +1,5 @@
 from unittest import TestCase
-from app.modules.preprocess.split_sentence import split_sentence
+from preprocess.split_sentence import split_sentence
 
 
 class TestSentenceSplit(TestCase):
