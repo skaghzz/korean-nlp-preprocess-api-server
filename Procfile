@@ -1,1 +1,1 @@
-web: gunicorn korean-nlp-preprocess-api-server.wsgi
+web: gunicorn --bind 0.0.0.0:$PORT app:app
