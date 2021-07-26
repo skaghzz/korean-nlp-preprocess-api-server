@@ -3,6 +3,7 @@ from flask_cors import CORS
 
 from preprocess import split_sentence as splitter
 from preprocess import clean_text as cleaner
+from preprocess import spell_check as spell_checker
 
 app = Flask(__name__)
 CORS(app, resources={
@@ -40,6 +41,13 @@ def split_sentence() -> dict:
 def clean_text() -> dict:
     texts = get_input_texts()
     text_list = cleaner.clean_text(texts)
+    return response(success=True, result=text_list)
+
+
+@app.route("/api/spell-check", methods=['POST'])
+def spell_check() -> dict:
+    texts = get_input_texts()
+    text_list = spell_checker.spell_check(texts)
     return response(success=True, result=text_list)
 
 
