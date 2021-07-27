@@ -59,7 +59,7 @@ def response_kakao_chatbot_simple_text(text: str) -> dict:
             "outputs": [
                 {
                     "simpleText": {
-                        "text": "교정 결과<br>" + text
+                        "text": "교정 결과\n" + text
                     }
                 }
             ]
