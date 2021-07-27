@@ -12,7 +12,7 @@
 <img src="교정_결과.PNG" width="300">
 <img src="아무말.PNG" width="300">
 <br>
-<img src="카카오톡채널_메인.PNG" width="300">
+<img src="카카오톡채널_메인.png" width="300">
 
 
 ## Links
