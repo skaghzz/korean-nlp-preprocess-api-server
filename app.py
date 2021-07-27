@@ -68,14 +68,15 @@ def response_kakao_chatbot_simple_text(text) -> dict:
 
 
 def get_input_text_kakao_chat():
+    print(request.get_json())
     json_data = request.get_json()
-    return json_data['userRequest']['utterance']
+    return json_data['action']['params']['spell_check_text']
 
 
 @app.route("/api/spell-check/kakao", methods=['POST'])
 def spell_check_kakao() -> dict:
-    user_utterance = get_input_text_kakao_chat()
-    checked_text = kakao_spell_check.spell_check(user_utterance)
+    text = get_input_text_kakao_chat()
+    checked_text = kakao_spell_check.spell_check(text)
     return response_kakao_chatbot_simple_text(text=checked_text)
 
 
