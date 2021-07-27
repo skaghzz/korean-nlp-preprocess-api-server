@@ -9,13 +9,16 @@
 
 
 ## Screenshot
-![맞춤법 교정 겨로가](교정_결과.PNG "맞춤법 교정 결과")
-![아무말](교정_결과.PNG "아무말이나 하는 경우")
+<img src="교정_결과.PNG" width="300">
+<img src="아무말.PNG" width="300">
+<br>
+<img src="카카오톡채널_메인.PNG" width="300">
 
 
 ## Links
 - [카카오톡 채널][채널URL]
-- [카카오톡 채팅][채팅URL]
+- [맞춤법 검사하러가기][채팅URL]
+
 
 [채널URL]:(http://pf.kakao.com/_FxcxdJs)
 [채팅URL]:(http://pf.kakao.com/_FxcxdJs/chat)
