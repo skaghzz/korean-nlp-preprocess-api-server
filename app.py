@@ -52,14 +52,14 @@ def spell_check() -> dict:
     return response(success=True, result=text_list)
 
 
-def response_kakao_chatbot_simple_text(text) -> dict:
+def response_kakao_chatbot_simple_text(text: str) -> dict:
     return {
         "version": "2.0",
         "template": {
             "outputs": [
                 {
                     "simpleText": {
-                        "text": text
+                        "text": "교정 결과<br>" + text
                     }
                 }
             ]
