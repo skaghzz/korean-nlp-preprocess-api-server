@@ -77,6 +77,7 @@ def get_input_text_kakao_chat():
 def spell_check_kakao() -> dict:
     text = get_input_text_kakao_chat()
     checked_text = kakao_spell_check.spell_check(text)
+    app.logger.info("[spell_check_kakao] input:[" + text + "], output: [" + checked_text + "]")
     return response_kakao_chatbot_simple_text(text=checked_text)
 
 
