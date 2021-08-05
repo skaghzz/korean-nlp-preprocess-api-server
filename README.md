@@ -104,5 +104,5 @@ pip install -r requirements.txt
 
 [한국어전처리]: https://colab.research.google.com/drive/1FfhWsP9izQcuVl06P30r5cCxELA1ciVE?usp=sharing#scrollTo=8nIXezslMdDC
 [kss]: https://github.com/hyunwoongko/kss
-[heroku]:(https://dashboard.heroku.com/apps/korean-nlp-preprocess-api)
-[카카오톡 챗봇을 이용한 맞춤법 검사]:(desc_kakao_chatbot/README.md)
+[heroku]: https://dashboard.heroku.com/apps/korean-nlp-preprocess-api
+[카카오톡 챗봇을 이용한 맞춤법 검사]: desc_kakao_chatbot/README.md

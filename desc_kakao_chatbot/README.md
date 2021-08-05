@@ -20,6 +20,6 @@
 - [맞춤법 검사하러가기][채팅URL]
 
 
-[채널URL]:(http://pf.kakao.com/_FxcxdJs)
-[채팅URL]:(http://pf.kakao.com/_FxcxdJs/chat)
-[kakao i open builder]:(https://i.kakao.com/)
+[채널URL]: http://pf.kakao.com/_FxcxdJs
+[채팅URL]: http://pf.kakao.com/_FxcxdJs/chat
+[kakao i open builder]: https://i.kakao.com/
